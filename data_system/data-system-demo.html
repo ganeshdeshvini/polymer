@@ -1,0 +1,50 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/polymer/lib/elements/dom-repeat.html">
+
+<dom-module id="data-system-demo">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <div>[[name.first]] [[name.last]] dsds</div>
+    
+    <template is="dom-repeat" items="[[users]]" as="user">
+        <div>Hi {{user.name}}</div>
+    </template>
+
+  </template>
+
+  <script>
+    /**
+     * `data-system-demo`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class DataSystemDemo extends Polymer.Element {
+      static get is() { return 'data-system-demo'; }
+      static get properties() {
+        return {
+          name : {
+            type : Object,
+            value : {
+              first : 'Ganesh',
+              last : 'Deshvini'
+            }
+          },
+          users : {
+            type : Array,
+            value : [{name: "ganesh"}, {name: "name"}]
+          }
+        };
+      }
+    }
+
+    window.customElements.define(DataSystemDemo.is, DataSystemDemo);
+  </script>
+</dom-module>
