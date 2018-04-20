@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>demo-demo demo</title>
+
+    <script src="../../webcomponentsjs/webcomponents-loader.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+    <link rel="import" href="../demo-demo.html">
+
+    <custom-style>
+      <style is="custom-style" include="demo-pages-shared-styles">
+         div.useParentWidth{
+          height: 40px;
+          background-color: springgreen;
+          width: 70px;
+        }
+        
+        div.content{
+          color: white;
+          background-color: blue;
+          height: 50px;
+          width: 50px;
+          border: 5px solid #000000;
+          float: left;
+          margin: 20px;
+        }
+
+        div.headerContent{
+          background-color: black;
+          color:white;
+        }
+
+        div.placeholder{
+          height: 20px;
+          background-color: white;          
+        }
+      </style>
+    </custom-style>
+  </head>
+  <body>
+
+      <div class="headerContent">I am sitting below the previous div element rather than
+          sitting beside the previous element
+        </div>
+      <div class="useParentWidth">D</div>
+      <div class="placeholder"></div>
+      <div class="headerContent">Below is the example for sitting next to each other div element</div>
+      <div class="content">This is div tag</div>
+      <div class="content">This is 2nd div tag</div>
+      <div class="content">This is 3rd div tag</div>
+      <div class="content">This is 4th div tag</div>
+
+  </body>
+</html>
